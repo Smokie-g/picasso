@@ -12,7 +12,6 @@ const HeaderWrapper = styled.div`
   align-items: center;
   width: 100%;
   position: fixed;
-  z-index: 2;
 `
 
 export const Header: FC<IHeader> = ({ children }) => (

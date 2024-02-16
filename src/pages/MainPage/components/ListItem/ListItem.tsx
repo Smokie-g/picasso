@@ -16,14 +16,14 @@ interface IProps {
   renderRow: FC<ListRowProps>
 }
 
-const TableWrapper = styled.div`
+const ListContainer = styled.div`
   border: 1px solid #f0f0f0;
   border-radius: 7px;
-  margin-top: ${HEADER_HEIGHT + 16}px;
+  margin-top: ${HEADER_HEIGHT}px;
   margin-left: 24px;
   margin-right: 24px;
 `
-const Wrapper = styled.div`
+const ListWrapper = styled.div`
   height: calc(100vh - 96px);
 `
 
@@ -33,8 +33,8 @@ export const ListItem: FC<IProps> = ({
   renderRow,
   rowHeight,
 }) => (
-  <TableWrapper>
-    <Wrapper>
+  <ListContainer>
+    <ListWrapper>
       <AutoSizer>
         {({ height, width }) => (
           <List
@@ -48,6 +48,6 @@ export const ListItem: FC<IProps> = ({
           />
         )}
       </AutoSizer>
-    </Wrapper>
-  </TableWrapper>
+    </ListWrapper>
+  </ListContainer>
 )

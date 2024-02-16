@@ -57,7 +57,7 @@ export const MainPage: React.FC = () => {
           description={posts[index].body}
           rowId={posts[index].id}
           style={style}
-          title={posts[index].title}
+          postTitle={posts[index].title}
           onClick={() => navigate(`details/${posts[index].id}`)}
         />
       )}

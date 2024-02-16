@@ -4,9 +4,9 @@ import { styled } from 'styled-components'
 interface IProps {
   rowItemRef: LegacyRef<HTMLDivElement>
   description: string
+  postTitle: string
   rowId: number
   style: CSSProperties
-  title: string
   onClick(): void
 }
 
@@ -26,7 +26,8 @@ const Content = styled.div`
 const TextContainer = styled.div`
   flex-direction: column;
 `
-const Text = styled.p`
+const Title = styled.h4``
+const Description = styled.p`
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -52,16 +53,16 @@ const Button = styled.button`
 export const RowItem: FC<IProps> = ({
   rowItemRef,
   description,
+  postTitle,
   rowId,
   style,
-  title,
   onClick,
 }) => (
   <ItemWrapper style={style} ref={rowItemRef}>
     <Content>
       <TextContainer>
-        <h4>{`${rowId}. ${title}`}</h4>
-        <Text>{description}</Text>
+        <Title>{`${rowId}. ${postTitle}`}</Title>
+        <Description>{description}</Description>
       </TextContainer>
       <ButtonWrapper>
         <Button onClick={onClick}>
