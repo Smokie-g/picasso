@@ -29,6 +29,8 @@ module.exports = {
 
   rules: {
     'no-extra-boolean-cast': 'off',
+    '@typescript-eslint/no-unused-vars': 'off',
+    'import/no-named-as-default-member': 'off',
     'no-console': 'off',
     'no-plusplus': 'off',
     'no-void': ['error', { allowAsStatement: true }],

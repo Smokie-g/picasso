@@ -24,9 +24,25 @@ const Container = styled.div`
   margin-left: 24px;
   padding-top: 16px;
   cursor: pointer;
+  /* margin-bottom: 8px; */
+  /* :hover > div {
+    background-color: ;
+    border-color: transparent;
+    fill: ;
+  }
+  :hover > p {
+    color: ;
+  }
+  :hover {
+    > div, svg, path {
+      fill: ;
+    }
+  } */
 `
 const ButtonContainer = styled.div`
   background-color: white;
+  /* height: 32px;
+  width: 32px; */
   border: 1px solid #f0f0f0;
   border-radius: 7px;
   display: flex;
@@ -44,6 +60,7 @@ const BackButtonText = styled.p`
 const Wrapper = styled.div`
   box-shadow: inset 0px 1px 1px rgba(47, 46, 65, 0.2);
   padding: 8px 24px;
+  /* background-color: white; */
 `
 const DetailContainer = styled.div`
   width: 97%;
@@ -55,21 +72,28 @@ const DetailContainer = styled.div`
 `
 const Info = styled.div`
   max-width: 284px;
+  /* white-space: nowrap; */
 `
 
 const Name = styled.p`
   font-weight: 600;
   font-size: 16px;
   padding-bottom: 2px;
+  /* overflow: hidden;
+  text-overflow: ellipsis; */
 `
 
 const Role = styled.p`
   font-size: 14px;
   padding-bottom: 2px;
+  /* overflow: hidden;
+  text-overflow: ellipsis; */
 `
 
 const Email = styled.p`
   font-size: 14px;
+  /* overflow: hidden;
+  text-overflow: ellipsis; */
 `
 
 export const DetailInfo: React.FC = () => {
