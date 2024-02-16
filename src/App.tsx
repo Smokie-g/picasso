@@ -1,24 +1,18 @@
-import React from 'react'
-import logo from './logo.svg'
+import React, { Suspense } from 'react'
+import { BrowserRouter } from 'react-router-dom'
+import { Provider } from 'react-redux'
 import './App.css'
+import { Router } from './navigation'
+import { store } from './redux'
 
-export const App = () => {
+export const App: React.FC = () => {
   return (
-    <div className='App'>
-      <header className='App-header'>
-        <img alt='logo' className='App-logo' src={logo} />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className='App-link'
-          href='https://reactjs.org'
-          rel='noopener noreferrer'
-          target='_blank'
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Suspense fallback={<></>}>
+      <Provider store={store}>
+        <BrowserRouter>
+          <Router />
+        </BrowserRouter>
+      </Provider>
+    </Suspense>
   )
 }
