@@ -12,7 +12,7 @@ const DetailInfo = lazy(() =>
 
 export const Router: React.FC = () => (
   <Routes>
-    <Route path='/' element={<MainPage />} />
+    <Route element={<MainPage />} path='/' />
     <Route element={<DetailInfo />} path='/details/:id' />
   </Routes>
 )
