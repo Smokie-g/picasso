@@ -2,6 +2,7 @@
   "name": "picasso",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://smokie-g.github.io/picasso/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
