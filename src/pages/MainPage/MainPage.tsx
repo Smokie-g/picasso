@@ -7,7 +7,7 @@ import {
   CellMeasurerCache,
 } from 'react-virtualized'
 import { useGetPostsQuery } from '../../api'
-import { Header } from '../../components'
+import { Header, SupportContainer } from '../../components'
 import { RowItem, ListItem } from './components'
 
 const MainLayout = styled.div`
@@ -36,11 +36,13 @@ export const MainPage: React.FC = () => {
   })
 
   if (isLoading || isFetching) {
-    return <div>loading...</div>
+    return <SupportContainer supportText='Loading...' />
   }
 
   if (isError) {
-    return <div>При загрузке данных произошла ошибка</div>
+    return (
+      <SupportContainer supportText='При загрузке данных произошла ошибка' />
+    )
   }
 
   const renderRow: React.FC<ListRowProps> = ({ index, key, style, parent }) => (

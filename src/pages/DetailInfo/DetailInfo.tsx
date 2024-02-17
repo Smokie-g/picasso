@@ -2,7 +2,7 @@ import React from 'react'
 import { styled } from 'styled-components'
 import { useNavigate, useParams } from 'react-router-dom'
 import { useGetPostQuery } from '../../api'
-import { Header, BackButton } from '../../components'
+import { Header, BackButton, SupportContainer } from '../../components'
 import { DetailInfoCard } from './components'
 
 const DetailInfoContainer = styled.div`
@@ -27,11 +27,15 @@ export const DetailInfo: React.FC = () => {
   } = useGetPostQuery(id || '')
 
   if (isLoading || isFetching) {
-    return <div>loading...</div>
+    return (
+      <SupportContainer supportText='Loading...' />
+    )
   }
 
   if (isError) {
-    return <div>При загрузке данных произошла ошибка</div>
+    return (
+      <SupportContainer supportText='При загрузке данных произошла ошибка' />
+    )
   }
 
   return (
